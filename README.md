@@ -1,2 +1,2 @@
-# creditapprovaltask
-Credit Approval System made for Alemeno
+# creditapprovalsystem
+This is a Credit Approval system made for Alemeno
