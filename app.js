@@ -13,9 +13,8 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-// Use routes
 app.use("/api/customers", customerRoutes);
 app.use("/api/loans", loanRoutes);
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Listening on port ${port}...`));

@@ -6,10 +6,9 @@ services:
     restart: always
     ports:
       - "3000:3000"
-      
     environment:
       NODE_ENV: ${NODE_ENV}
-      DB_HOST: ${DB_HOST}
+      DB_HOST: db
       DB_USER: ${DB_USER}
       DB_PASS: ${DB_PASS}
       DB_NAME: ${DB_NAME}
@@ -24,8 +23,10 @@ services:
       MYSQL_DATABASE: ${MYSQL_DATABASE}
     volumes:
       - mysql_data:/var/lib/mysql
-    ports:
-      - "3307:3306"
+
+networks:
+  default:
+    driver: bridge
 
 volumes:
   mysql_data:
